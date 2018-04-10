@@ -12,11 +12,39 @@ public class CalMenufinal {
 
 	static Scanner sc = new Scanner(System.in);
 
+	// ZUFALLSGENERIERTE ZAHLEN
+
 	// Random zahl bis 10
 	static int getRandomNumber10() {
 		SecureRandom random = new SecureRandom();
 		return random.nextInt(10);
 	}
+
+	// Random Zahl bis 20
+	static int getRandomNumber20() {
+		SecureRandom random = new SecureRandom();
+		return random.nextInt(20);
+	}
+
+	// Random Zahl bis 100
+	static int getRandomNumber100() {
+		SecureRandom random = new SecureRandom();
+		return random.nextInt(100);
+	}
+
+	// Random Zahl bis 1000
+	static int getRandomNumber1000() {
+		SecureRandom random = new SecureRandom();
+		return random.nextInt(1000);
+	}
+
+	// Random Zahl bis 1000000
+	static int getRandomNumber1MIO() {
+		SecureRandom random = new SecureRandom();
+		return random.nextInt(1000000);
+	}
+
+	// AUFGABE 1.1
 
 	public static void add10() {
 		System.out.println("Aufgabe: Addiere im Zahlenraum bis 10 (ohne Zehneruebergang)");
@@ -28,7 +56,8 @@ public class CalMenufinal {
 
 		if ((number1 + number2) == Random) {
 			System.out.println("Richtig, " + number1 + " addiert mit " + number2 + " ergibt: " + Random);
-			System.out.println("Möchtest du 1. weiter üben 2. die nächste Aufgabe. 3. Zurück ins Menü. 4. Programm beenden.");
+			System.out.println(
+					"Möchtest du 1. weiter üben 2. die nächste Aufgabe. 3. Zurück ins Menü. 4. Programm beenden.");
 			int weiterleitung = sc.nextInt();
 			switch (weiterleitung) {
 			case 1:
@@ -44,27 +73,134 @@ public class CalMenufinal {
 			default:
 				System.out.println("Bis zum nächsten mal ^.^");
 			}
-		
-		}
-		else {
+
+		} else {
 			System.out.println("Das ist leider das falsche Ergebnis.");
 			System.out.println("Zur Übung bekommst du einen neuen Versuch.");
 			add10();
 		} // end of if-else
+	}
+
+	// AUFGABE 1.2
+
+	public static void add10extended() {
+		System.out.println("Aufgabe: Addiere im Zahlenraum bis 10 (mit Zehneruebergang)");
+		int Random = getRandomNumber20();
+
+		System.out.println("Welche beiden Zahlen addiert ergeben: " + Random);
+		int number1 = sc.nextInt();
+		int number2 = sc.nextInt();
+
+		if ((number1 + number2) == Random) {
+			System.out.println("Richtig, " + number1 + " addiert mit " + number2 + " ergibt: " + Random);
+			System.out.println(
+					"Möchtest du 1. weiter üben 2. die nächste Aufgabe. 3. Zurück ins Menü. 4. Programm beenden.");
+			int weiterleitung = sc.nextInt();
+			switch (weiterleitung) {
+			case 1:
+				add10extended();
+				break;
+			case 2:
+				add100();
+				break;
+			case 3:
+				int feed = feed();
+				menueselection(feed);
+				break;
+			default:
+				System.out.println("Bis zum nächsten mal ^.^");
+			}
+
+		} else {
+			System.out.println("Das ist leider das falsche Ergebnis.");
+			System.out.println("Zur Übung bekommst du einen neuen Versuch.");
+			add10extended();
+		} // end of if-else
+
+	}
+
+	// AUFGABE 1.3
+
+	public static void add100() {
+		System.out.println("Aufgabe: Addiere im Zahlenraum bis 100");
+		int Random = getRandomNumber100();
+
+		System.out.println("Welche beiden Zahlen addiert ergeben: " + Random);
+		int number1 = sc.nextInt();
+		int number2 = sc.nextInt();
+
+		if ((number1 + number2) == Random) {
+			System.out.println("Richtig, " + number1 + " addiert mit " + number2 + " ergibt: " + Random);
+			System.out.println(
+					"Möchtest du 1. weiter üben 2. die nächste Aufgabe. 3. Zurück ins Menü. 4. Programm beenden.");
+			int weiterleitung = sc.nextInt();
+			switch (weiterleitung) {
+			case 1:
+				add100();
+				break;
+			case 2:
+				add100();
+				break;
+			case 3:
+				int feed = feed();
+				menueselection(feed);
+				break;
+			default:
+				System.out.println("Bis zum nächsten mal ^.^");
+			}
+
+		} else {
+			System.out.println("Das ist leider das falsche Ergebnis.");
+			System.out.println("Zur Übung bekommst du einen neuen Versuch.");
+			add100();
+		} // end of if-else
+
+	}
+
+	// AUFGABE 1.4
+
+	public static void add1000() {
+		System.out.println("Aufgabe: Addiere im Zahlenraum bis 1000");
+		int Random = getRandomNumber1000();
+
+		System.out.println("Welche beiden Zahlen addiert ergeben: " + Random);
+		int number1 = sc.nextInt();
+		int number2 = sc.nextInt();
+
+		if ((number1 + number2) == Random) {
+			System.out.println("Richtig, " + number1 + " addiert mit " + number2 + " ergibt: " + Random);
+			System.out.println(
+					"Möchtest du 1. weiter üben 2. die nächste Aufgabe. 3. Zurück ins Menü. 4. Programm beenden.");
+			int weiterleitung = sc.nextInt();
+			switch (weiterleitung) {
+			case 1:
+				add1000();
+				break;
+			case 2:
+				add100();
+				break;
+			case 3:
+				int feed = feed();
+				menueselection(feed);
+				break;
+			default:
+				System.out.println("Bis zum nächsten mal ^.^");
+			}
+
+		} else {
+			System.out.println("Das ist leider das falsche Ergebnis.");
+			System.out.println("Zur Übung bekommst du einen neuen Versuch.");
+			add1000();
+		} // end of if-else
+	}
 
 	
-	}
 	
-	// Random Zahl bis 20
-	static int getRandomNumber20() {
-		SecureRandom random = new SecureRandom();
-		return random.nextInt(20);
-	}
+	// AUFGABE 1.5
 	
-	
-	public static void add10extended() {
-		System.out.println("Aufgabe: Addiere im Zahlenraum bis 10 (ohne Zehneruebergang)");
-		int Random = getRandomNumber20();
+	public static void add1MIO() {
+		System.out.println("Aufgabe: Addiere im Zahlenraum bis 1000000");
+		int Random = getRandomNumber1MIO();
 
 		System.out.println("Welche beiden Zahlen addiert ergeben: " + Random);
 		int number1 = sc.nextInt();
@@ -76,10 +212,10 @@ public class CalMenufinal {
 			int weiterleitung = sc.nextInt();
 			switch (weiterleitung) {
 			case 1:
-				parentchild100();
+				add1MIO();
 				break;
 			case 2:
-				parentchild1000();
+				add100();
 				break;
 			case 3:
 				int feed = feed();
@@ -88,22 +224,58 @@ public class CalMenufinal {
 			default:
 				System.out.println("Bis zum nächsten mal ^.^");
 			}
-		
-		}
-		else {
+
+		} else {
 			System.out.println("Das ist leider das falsche Ergebnis.");
 			System.out.println("Zur Übung bekommst du einen neuen Versuch.");
-			add10extended();
-		} // end of if-else
-
+			add1MIO();
+		} // end of if-else	
 	}
 	
+	
+	
+	//AUFGABE 2.1
+	
+	public static void multismall() {
+		System.out.println("Aufgabe: Mulitpliziere Kleines Ein-Mal-Eins");
+		int Random = getRandomNumber10();
+		
+		for(int i = 3; i <= 10; i++) {	
+			int erg = Random * i;
+			System.out.println(erg);
+		}
+	System.out.println("Welches Kleine Ein-Mal-Eins ist hier zu erkennen?");
+	int number1 = sc.nextInt();
+	
+	if(number1 == Random) {
+		
+		System.out.println("Richtig, " + number1 + " gehört zu diesem Ein-Mal-Eins");
+		System.out.println("Möchtest du 1. weiter üben 2. die nächste Aufgabe. 3. Zurück ins Menü. 4. Programm beenden.");
+		int weiterleitung = sc.nextInt();
+		switch (weiterleitung) {
+		case 1:
+			multismall();
+			break;
+		case 2:
+		//	multibig();
+			break;
+		case 3:
+			int feed = feed();
+			menueselection(feed);
+			break;
+		default:
+			System.out.println("Bis zum nächsten mal ^.^");
+		}
 
-	// Random Zahl bis 100
-	static int getRandomNumber100() {
-		SecureRandom random = new SecureRandom();
-		return random.nextInt(100);
+	} else {
+		System.out.println("Das ist leider das falsche Ergebnis.");
+		System.out.println("Zur Übung bekommst du einen neuen Versuch.");
+		multismall();
+	} // end of if-else	
 	}
+	
+	
+	// AUFGABE 4.1
 
 	// Nachbarzahlen +/- 1 bis 100
 	public static void parentchild100() {
@@ -145,11 +317,7 @@ public class CalMenufinal {
 
 	}
 
-	// Random Zahl bis 1000
-	static int getRandomNumber1000() {
-		SecureRandom random = new SecureRandom();
-		return random.nextInt(1000);
-	}
+	// AUFGABE 4.2
 
 	// Nachbarzahlen +/- 1 bis 1000
 	public static void parentchild1000() {
@@ -191,16 +359,12 @@ public class CalMenufinal {
 
 	}
 
-	// Random Zahl bis 1000000
-	static int getRandomNumber1000000() {
-		SecureRandom random = new SecureRandom();
-		return random.nextInt(1000000);
-	}
+	// AUFGABE 4.3
 
 	// Nachbarzahlen +/- 1 bis 1000000
 	public static void parentchild1MIO() {
 		System.out.println("Aufgabe: Gebe Vorgaenger und Nachfolger an im Zahlenraum bis 1000000");
-		int Random = getRandomNumber1000000();
+		int Random = getRandomNumber1MIO();
 
 		System.out.println("Nenne erst den Vorgänger und dann den Nachfolger von " + Random);
 		int number1 = sc.nextInt();
@@ -235,6 +399,8 @@ public class CalMenufinal {
 			parentchild1MIO();
 		} // end of if-else
 	}
+
+	// AUFGABE 4.4
 
 	// NachbarZehner bis 1000
 	public static void parentchild10er() {
@@ -275,6 +441,8 @@ public class CalMenufinal {
 		} // end of if-else
 	}
 
+	// AUFGABE 4.5
+
 	// NachbarHunderter bis 1000
 	public static void parentchild100er() {
 		System.out.println("Aufgabe: Gebe Vorgaenger Hunderter und Nachfolge Hunderter an im Zahlenraum bis 1000");
@@ -314,10 +482,12 @@ public class CalMenufinal {
 		} // end of if-else
 	}
 
+	// Aufgabe 4.6
+
 	// NachbarHunderter bis 1000000
 	public static void parentchild1MIOer() {
 		System.out.println("Aufgabe: Gebe Vorgaenger Hunderter und Nachfolge Hunderter an im Zahlenraum bis 1000000");
-		int Random = getRandomNumber1000000();
+		int Random = getRandomNumber1MIO();
 
 		System.out.println("Nenne erst den Vorgänger Hunderter und dann den Nachfolge Hunderter von " + Random);
 		int number1 = sc.nextInt();
@@ -391,19 +561,19 @@ public class CalMenufinal {
 				break;
 			case 2:
 				System.out.println("Addiere im Zahlrenraum bis 10 (mit Zehneruebergang)");
-				// Funktion
+				add10extended();
 				break;
 			case 3:
 				System.out.println("Addiere von Zehner im Zahlenraum bis 100");
-				// Funktion
+				add100();
 				break;
 			case 4:
 				System.out.println("4. Addiere von Zahlen im Zahlenraum bis 1000");
-				// Funktion
+				add1000();
 				break;
 			case 5:
 				System.out.println("5. Addiere von Zahlen im Zahlenraum bis 1000000");
-				// Funktion
+				add1MIO();
 				break;
 			default:
 			}
@@ -424,7 +594,7 @@ public class CalMenufinal {
 
 			case 1:
 				System.out.println("Multipliziere Kleines Ein-Mal-Eins");
-				// Funktion
+				multismall();
 				break;
 			case 2:
 				System.out.println("Multipliziere Großes Ein-Mal-Eins");
